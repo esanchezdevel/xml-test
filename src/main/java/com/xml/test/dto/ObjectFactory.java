@@ -19,7 +19,6 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 public class ObjectFactory {
 
 	private final static QName _MyDTO_QNAME = new QName("", "my-dto");
-	private final static QName _MySubDTO_QNAME = new QName("", "my-sub-dto");
 	
 	public ObjectFactory() {
 		
@@ -32,14 +31,5 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "", name = "my-dto")
     public JAXBElement<MyDTO> createMyDTO(MyDTO value) {
         return new JAXBElement<MyDTO>(_MyDTO_QNAME, MyDTO.class, null, value);
-    }
-    
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MySubDTO }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "", name = "my-sub-dto")
-    public JAXBElement<MySubDTO> createMySubDTO(MySubDTO value) {
-        return new JAXBElement<MySubDTO>(_MySubDTO_QNAME, MySubDTO.class, null, value);
     }
 }
